@@ -13,7 +13,7 @@
 </head>
 <body>
   <h1>Nacionalidade</h1>
-  Onde você mora: <input type="text" name="txtvel" id="txtvel"> 
+  Qual sua nacionalidade: <input type="text" name="txtvel" id="txtvel"> 
   <input type="button" value="Verificar" onclick="verificar()">
   <div id="res"></div>
 
@@ -22,14 +22,14 @@
     function verificar() {
       var txtv = window.document.querySelector('input#txtvel')
       var res = window.document.querySelector('div#res')
-      var país = Text(txtv.value)
+      var país = String(txtv.value)
 
-      res.innerHTML = `Vivendo no ${país}`
+      res.innerHTML = `Seu país é <strong>${país}</strong>`
       
       if (país === 'Brasil') {
-        res.innerHTML += ` Você é Brasileiro`
+        res.innerHTML += `, você é Brasileiro!`
       } else {
-        res.innerHTML += ` Você é Estrangeiro`
+        res.innerHTML += `, você é Estrangeiro!`
       }
     }
   </script>
