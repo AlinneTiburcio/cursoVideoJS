@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplicação</title>
+  <style>
+    div#retorno{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multiplicando Valores</h1>
+  <input type="number" name="multi1" id="multi1"> *
+  <input type="number" name="multi2" id="multi2">
+  <input type="button" value="Multiplicação" onclick="multiplicar()">
+  <div id="retorno"></div>
+
+  <script>
+    function multiplicar(){
+      var multi1 = window.document.getElementById('multi1');
+      var multi1 = Number(multi1.value);
+      var multi2 = window.document.getElementById('multi2');
+      var multi2 = Number(multi2.value);
+
+      var retorno = window.document.getElementById('retorno');
+
+      var m = multi1 * multi2;
+
+      retorno.innerHTML = `A multiplicação de ${multi1} e ${multi2} é igual a <strong>${m}</strong>`
+    }
+  </script>
+  
+</body>
+</html>

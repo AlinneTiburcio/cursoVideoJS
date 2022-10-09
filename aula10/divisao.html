@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div#res{
+      margin-top: 20px;
+    }
+  </style>
+  <title>Divisão</title>
+</head>
+<body>
+  <h1>Dividindo Valores</h1>
+  <input type="number" name="divisao1" id="divisao1"> /
+  <input type="number" name="divisao2" id="divisao2">
+  <input type="button" value="Divisão" onclick="dividir()">
+  <div id="res"></div>
+
+  <script>
+    function dividir(){
+    var divisao1 = window.document.getElementById('divisao1');
+    var divisao1 = Number(divisao1.value);
+    var divisao2 = window.document.getElementById('divisao2');
+    var divisao2 = Number(divisao2.value)
+
+    var res = window.document.getElementById('res');
+
+    var d = divisao1 / divisao2;
+
+    res.innerHTML = `A divisão de ${divisao1} e ${divisao2} é igual a <strong>${d}</strong>`
+    }
+  </script>
+</body>
+</html>

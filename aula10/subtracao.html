@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtração</title>
+  <style>
+    div#res {
+      margin-top: 20px;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Subtraindo Valores</h1>
+  <input type="number" name="menos1" id="menos1"> -
+  <input type="number" name="menos2" id="menos2">
+  <input type="button" value="Subtrair" onclick="subtrair()">
+  <div id="res"></div>
+
+  <script>
+    function subtrair(){
+      var menos1 = window.document.getElementById('menos1');
+      var menos1 = Number(menos1.value);
+      var menos2 = window.document.getElementById('menos2');
+      var menos2 = Number(menos2.value);
+
+      var res = window.document.getElementById('res');
+      var subtracao = menos1 - menos2;
+      
+      res.innerHTML = `A Subtração de ${menos1} e ${menos2} é igual a <strong>${subtracao}</strong>`
+    }
+  </script>
+  
+</body>
+</html>
